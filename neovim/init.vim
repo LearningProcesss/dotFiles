@@ -14,7 +14,6 @@ Plug 'maxmellon/vim-jsx-pretty'
 "Plug 'tomtom/tlib_vim'
 "Plug 'garbas/vim-snipmate'
 "Plug 'honza/vim-snippets'
-" React code snippets
 "Plug 'epilande/vim-react-snippets'
 "******************************************************************************
 
@@ -29,6 +28,7 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'Yggdroot/indentLine'
 Plug 'vimlab/split-term.vim'
+Plug 'dyng/ctrlsf.vim' "require ag installed
 "******************************************************************************
 
 "************ Text manipulations **********************************************
@@ -37,6 +37,7 @@ Plug 'tpope/vim-surround'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'preservim/nerdcommenter'
 Plug 'mattn/emmet-vim'
+Plug 'matze/vim-move'
 "******************************************************************************
 
 "************* Color **********************************************************
@@ -139,22 +140,43 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 
 "switch panel use alt+hjkl to move between split/vsplit panels
 
-tnoremap <A-h> <C-\><C-n><C-w>h
-tnoremap <A-j> <C-\><C-n><C-w>j
-tnoremap <A-k> <C-\><C-n><C-w>k
-tnoremap <A-l> <C-\><C-n><C-w>l
-nnoremap <A-h> <C-w>h
-nnoremap <A-j> <C-w>j
-nnoremap <A-k> <C-w>k
-nnoremap <A-l> <C-w>l
+"tnoremap <A-h> <C-\><C-n><C-w>h
+"tnoremap <A-j> <C-\><C-n><C-w>j
+"tnoremap <A-k> <C-\><C-n><C-w>k
+"tnoremap <A-l> <C-\><C-n><C-w>l
+"nnoremap <A-h> <C-w>h
+"nnoremap <A-j> <C-w>j
+"nnoremap <A-k> <C-w>k
+"nnoremap <A-l> <C-w>l
 "-------------------------------------------------------------------------------
 
-"------------------------------------- controlp search files -------------------
+"------------------------------------- ctrlp search files -------------------
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
 "-------------------------------------------------------------------------------
 
+"------------------------------------- ctrlf search in files -------------------
+let g:ctrlsf_default_view_mode = 'compact'
+
+"nmap     <C-F>f <Plug>CtrlSFPrompt
+"vmap     <C-F>f <Plug>CtrlSFVwordPath
+"vmap     <C-F>F <Plug>CtrlSFVwordExec
+"nmap     <C-F>n <Plug>CtrlSFCwordPath
+"nmap     <C-F>p <Plug>CtrlSFPwordPath
+"nnoremap <C-F>o :CtrlSFOpen<CR>
+"nnoremap <C-F>t :CtrlSFToggle<CR>
+"inoremap <C-F>t <Esc>:CtrlSFToggle<CR>
+"-------------------------------------------------------------------------------
+
 "------------------------- conquer of completion -------------------------------------------------------------------
+
 let g:coc_global_extensions = ['coc-snippets', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+
+"Prettier
+command! -nargs=0 Prettier :CocCommand prettier.formatFile
+
+vmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
+
 " TextEdit might fail if hidden is not set.
 set hidden
 
