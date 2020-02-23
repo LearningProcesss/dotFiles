@@ -109,5 +109,6 @@ source $ZSH/oh-my-zsh.sh
 alias config_zsh="nano ~/.zshrc"
 alias config_antigen="nano ~/.antigenrc"
 alias config_neovim="nano ~/.config/nvim/init.vim"
-alias copyDotFilesToRepo="cp .zshrc Documents/dev/dotFiles/zsh; cp .antigenrc Documents/dev/dotFiles/zsh/antigen; cp ~/.SpaceVim.d/init.toml Documents/dev/dotFiles/spacevim"
+alias config_spacevim="nano ~/.SpaceVim.d/init.toml"
+alias copyDotFilesToRepo="cp .zshrc Documents/dev/dotFiles/zsh; cp .antigenrc Documents/dev/dotFiles/zsh/antigen; cp ~/.SpaceVim.d/init.toml Documents/dev/dotFiles/spacevim; cp .spacemacs Documents/dev/dotFiles/spacemacs"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
