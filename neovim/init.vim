@@ -9,6 +9,15 @@ Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 "******************************************************************************
 
+"************* Code Snippets **************************************************
+"Plug 'MarcWeber/vim-addon-mw-utils'
+"Plug 'tomtom/tlib_vim'
+"Plug 'garbas/vim-snipmate'
+"Plug 'honza/vim-snippets'
+" React code snippets
+"Plug 'epilande/vim-react-snippets'
+"******************************************************************************
+
 "************* GIT ************************************************************
 Plug 'itchyny/vim-gitbranch'
 "******************************************************************************
@@ -63,7 +72,9 @@ set termguicolors
 
 set omnifunc=csscomplete#CompleteCSS
 
-filetype on
+"let g:python3_host_prog = '/usr/bin/python3'
+
+filetype plugin indent on
 
 "ayu coloro plugin {
 let ayucolor="dark"
@@ -76,6 +87,16 @@ colorscheme vimterial_dark
 "}
 "-----------------------------------------------------------------------------
 
+"--------------------------------- utilsnip ----------------------------------
+
+" Trigger configuration. Do not use <tab> if you use https://github.com/Valloric/YouCompleteMe.
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<c-b>"
+let g:UltiSnipsJumpBackwardTrigger="<c-z>"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+"-----------------------------------------------------------------------------
 
 "--------------------------------- nerdtree ----------------------------------
 let g:NERDTreeGitStatusWithFlags = 1
@@ -96,9 +117,9 @@ autocmd VimEnter * if argc() == 1 && isdirectory(argv()[0]) && !exists("s:std_in
 nnoremap <silent> <C-b> :NERDTreeToggle<CR>
 "----------------------------------------------------------------------------
 
-"devicons
+"----------------------------------- devicons -------------------------------
 
-"integrated terminal
+"----------------------------------- integrated terminal --------------------
  " open new split panes to right and below
 set splitright
 set splitbelow
@@ -114,7 +135,10 @@ function! OpenTerminal()
 endfunction
 nnoremap <c-n> :call OpenTerminal()<CR>
 
+"------------------------------------ panel swith ---------------------------
+
 "switch panel use alt+hjkl to move between split/vsplit panels
+
 tnoremap <A-h> <C-\><C-n><C-w>h
 tnoremap <A-j> <C-\><C-n><C-w>j
 tnoremap <A-k> <C-\><C-n><C-w>k
@@ -123,12 +147,14 @@ nnoremap <A-h> <C-w>h
 nnoremap <A-j> <C-w>j
 nnoremap <A-k> <C-w>k
 nnoremap <A-l> <C-w>l
+"-------------------------------------------------------------------------------
 
-"controlp search files
+"------------------------------------- controlp search files -------------------
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+"-------------------------------------------------------------------------------
 
 "------------------------- conquer of completion -------------------------------------------------------------------
-let g:coc_global_extensions = ['coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
+let g:coc_global_extensions = ['coc-snippets', 'coc-tailwindcss', 'coc-tslint-plugin', 'coc-tsserver', 'coc-emmet', 'coc-css', 'coc-html', 'coc-json', 'coc-yank', 'coc-prettier']
 " TextEdit might fail if hidden is not set.
 set hidden
 
