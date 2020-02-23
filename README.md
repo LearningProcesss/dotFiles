@@ -16,6 +16,12 @@ Primary file is **~/.config/nvim/init.vim**
 **Plugin Manager**: vim-plug 
 - [guide](https://www.youtube.com/watch?v=zhu1zFsD0t4)
 
+### Misc
+
+Many plugins may require python3
+
+- add let g:python3_host_prog = '/usr/bin/python3' to init.vim
+- pip3 install pynvim --user
 
 ## oh-my-zsh
 
