@@ -106,9 +106,10 @@ source $ZSH/oh-my-zsh.sh
 # For a full list of active aliases, run `alias`.
 #
 # Example aliases
+alias config_spacemacs="nano ~/.spacemacs"
 alias config_zsh="nano ~/.zshrc"
 alias config_antigen="nano ~/.antigenrc"
 alias config_neovim="nano ~/.config/nvim/init.vim"
 alias config_spacevim="nano ~/.SpaceVim.d/init.toml"
-alias copyDotFilesToRepo="cp .zshrc Documents/dev/dotFiles/zsh; cp .antigenrc Documents/dev/dotFiles/zsh/antigen; cp ~/.SpaceVim.d/init.toml Documents/dev/dotFiles/spacevim; cp .spacemacs Documents/dev/dotFiles/spacemacs"
+alias copyDotFilesToRepo="cp ~/.config/nvim/init.vim Documents/dev/dotFiles/neovim; cp .zshrc Documents/dev/dotFiles/zsh; cp .antigenrc Documents/dev/dotFiles/zsh/antigen; cp ~/.SpaceVim.d/init.toml Documents/dev/dotFiles/spacevim; cp .spacemacs Documents/dev/dotFiles/spacemacs"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
