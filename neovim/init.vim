@@ -151,10 +151,17 @@ nnoremap <c-n> :call OpenTerminal()<CR>
 "-------------------------------------------------------------------------------
 
 "------------------------------------- ctrlp search files -------------------
+
 let g:ctrlp_custom_ignore = '\v[\/](node_modules|target|dist)|(\.(swp|ico|git|svn))$'
+
+let g:ctrlp_prompt_mappings = {
+    \ 'AcceptSelection("e")': ['<2-LeftMouse>'],
+    \ 'AcceptSelection("t")': ['<cr>'],
+    \ }
 "-------------------------------------------------------------------------------
 
 "------------------------------------- ctrlf search in files -------------------
+
 let g:ctrlsf_default_view_mode = 'compact'
 
 "nmap     <C-F>f <Plug>CtrlSFPrompt
