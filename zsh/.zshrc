@@ -16,7 +16,7 @@ fi
 # Load Antigen
 source /usr/share/zsh/share/antigen.zsh
 # Load Antigen configurations
-antigen init .antigenrc
+antigen init ~/.antigenrc
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,

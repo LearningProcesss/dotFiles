@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release'}
 "******************************************************************************
 
 "************* Syntax Higl.. **************************************************
+Plug 'othree/html5.vim'
 Plug 'pangloss/vim-javascript'
 Plug 'maxmellon/vim-jsx-pretty'
 "******************************************************************************
@@ -19,6 +20,7 @@ Plug 'maxmellon/vim-jsx-pretty'
 
 "************* GIT ************************************************************
 Plug 'itchyny/vim-gitbranch'
+Plug 'airblade/vim-gitgutter'
 "******************************************************************************
 
 "************ Utils ***********************************************************
@@ -41,12 +43,14 @@ Plug 'matze/vim-move'
 "******************************************************************************
 
 "************* Color **********************************************************
+Plug 'tomasiser/vim-code-dark'
+Plug 'arzg/vim-colors-xcode'
 Plug 'dikiaap/minimalist'
 Plug 'ayu-theme/ayu-vim'
 Plug 'larsbs/vimterial_dark'
-"Plug 'crusoexia/vim-monokai'
-"Plug 'sainnhe/gruvbox-material'
-"Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'crusoexia/vim-monokai'
+Plug 'sainnhe/gruvbox-material'
+Plug 'dracula/vim', { 'as': 'dracula' }
 "******************************************************************************
 
 call plug#end()
@@ -67,6 +71,8 @@ call plug#end()
 ":Plugin          -> multiple commands to manage plugins
 
 "--------------------------------- VIM Generic configurations ----------------
+colorscheme codedark
+
 set number
 
 set termguicolors
@@ -81,10 +87,14 @@ filetype plugin indent on
 let ayucolor="dark"
 "}
 
+"gruvbox color plugin {
+let g:gruvbox_material_background = 'hard'
+"}
+
 "minimalist color plugin {
-set t_Co=256
+"set t_Co=256
 syntax on
-colorscheme vimterial_dark
+"colorscheme vimterial_dark
 "}
 "-----------------------------------------------------------------------------
 
@@ -162,7 +172,9 @@ let g:ctrlp_prompt_mappings = {
 
 "------------------------------------- ctrlf search in files -------------------
 
-let g:ctrlsf_default_view_mode = 'compact'
+"let g:ctrlsf_default_view_mode = 'default'
+
+"let g:ctrlsf_auto_preview = 1
 
 "nmap     <C-F>f <Plug>CtrlSFPrompt
 "vmap     <C-F>f <Plug>CtrlSFVwordPath
