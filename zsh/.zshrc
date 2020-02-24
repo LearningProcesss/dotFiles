@@ -4,11 +4,14 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/mattia/.oh-my-zsh"
 
-# Node was not working
-# export PATH="~/.npm-global/bin:$PATH"
-
+# Node,NPM,NVM was not working
 export NVM_DIR=~/.nvm
  [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"
+
+#Tilix
+if [ $TILIX_ID ] || [ $VTE_VERSION ]; then
+        source /etc/profile.d/vte.sh
+fi
 
 # Load Antigen
 source /usr/share/zsh/share/antigen.zsh
