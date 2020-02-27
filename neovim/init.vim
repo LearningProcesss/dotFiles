@@ -70,6 +70,10 @@ call plug#end()
 ":messages        -> show logs
 ":Plugin          -> multiple commands to manage plugins
 
+"++++++++++++++++++++++++++++++++++ VIM Generic Mapping ++++++++++++++++++++++
+map <C-a> <esc>ggVG<CR>
+"+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
 "--------------------------------- VIM Generic configurations ----------------
 colorscheme codedark
 
@@ -110,9 +114,13 @@ let g:UltiSnipsEditSplit="vertical"
 "-----------------------------------------------------------------------------
 
 "--------------------------------- nerdtree ----------------------------------
+
 let g:NERDTreeGitStatusWithFlags = 1
 let g:NERDTreeIgnore = ['^node_modules$']
+
+
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
 autocmd StdinReadPre * let s:std_in=1
 
 "open a NERDTree automatically when vim starts up if no files were specified
