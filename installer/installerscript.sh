@@ -20,6 +20,10 @@ echo '-> httpie'
 
 sudo apt install httpie -y
 
+echo '-> jq'
+
+sudo apt install jq -y
+
 echo '-> GithubCli'
 
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
