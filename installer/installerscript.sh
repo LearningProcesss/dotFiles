@@ -16,6 +16,10 @@ echo '-> OhMyZsh - plugin zsh-syntax-highlighting'
 
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
 
+echo '-> httpie'
+
+sudo apt install httpie -y
+
 echo '-> GithubCli'
 
 curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
