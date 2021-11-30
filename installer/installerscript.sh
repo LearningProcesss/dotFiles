@@ -31,3 +31,6 @@ echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githu
 sudo apt update
 sudo apt install gh -y
 
+echo '-> firecamp'
+
+wget https://firecamp.netlify.app/.netlify/functions/download\?pt\=lin
