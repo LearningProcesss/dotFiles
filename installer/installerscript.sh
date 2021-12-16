@@ -33,7 +33,7 @@ sudo apt install gh -y
 
 echo '-> firecamp'
 
-wget https://firecamp.netlify.app/.netlify/functions/download\?pt\=lin
+wget --header="Content-Type: application/vnd.appimage" https://firecamp.ams3.digitaloceanspaces.com/versions/linux/Firecamp-2.3.1.AppImage
 
 echo '-> chrome'
 
