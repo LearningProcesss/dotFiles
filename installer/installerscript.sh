@@ -34,3 +34,9 @@ sudo apt install gh -y
 echo '-> firecamp'
 
 wget https://firecamp.netlify.app/.netlify/functions/download\?pt\=lin
+
+echo '-> chrome'
+
+wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+
+sudo apt install ./google-chrome-stable_current_amd64.deb
