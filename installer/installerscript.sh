@@ -50,3 +50,9 @@ echo "deb [signed-by=/usr/share/keyrings/brave-browser-archive-keyring.gpg arch=
 sudo apt update
 
 sudo apt install brave-browser -y
+
+echo '-> git delta plugin'
+
+curl 'https://github.com/dandavison/delta/releases/download/0.11.3/git-delta_0.11.3_amd64.deb'
+
+cd ~/Downloads && curl https://github.com/dandavison/delta/releases/download/0.11.3/git-delta_0.11.3_amd64.deb --output git-delta_0.11.3_amd64.deb
