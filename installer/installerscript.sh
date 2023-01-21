@@ -128,3 +128,15 @@ brew install fx
 echo '-> yq'
 
 brew install yq
+
+echo '-> azuredatastudio'
+
+curl 'https://go.microsoft.com/fwlink/?linkid=2187522'
+
+echo '-> flameshot'
+
+sudo apt install flameshot
+
+echo '-> peek'
+
+sudo add-apt-repository ppa:peek-developers/stable && sudo apt update && sudo apt install peek
