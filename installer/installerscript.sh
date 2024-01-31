@@ -62,6 +62,10 @@ echo '-> httpie'
 
 sudo apt install httpie -y
 
+echo '-> httpie desktop'
+
+echo '-> hurl'
+
 echo '-> jq'
 
 sudo apt install jq -y
@@ -140,3 +144,15 @@ sudo apt install flameshot
 echo '-> peek'
 
 sudo add-apt-repository ppa:peek-developers/stable && sudo apt update && sudo apt install peek
+
+echo '-> docker'
+
+echo '-> docker compose'
+
+echo '-> dockge'
+
+echo '-> portainer'
+
+echo '-> obsidian'
+
+echo '-> raindrop'
