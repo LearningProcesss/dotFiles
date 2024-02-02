@@ -149,6 +149,8 @@ echo '-> docker'
 
 echo '-> docker compose'
 
+sudo apt-get update && sudo apt-get install docker-compose-plugin
+
 echo '-> dockge'
 
 echo '-> portainer'
@@ -156,3 +158,11 @@ echo '-> portainer'
 echo '-> obsidian'
 
 echo '-> raindrop'
+
+echo '-> devpod'
+
+cd ~/Downloads && curl -fsSL https://github.com/loft-sh/devpod/releases/latest/download/DevPod_linux_amd64.AppImage --output DevPod_linux_amd64.AppImage
+
+echo '-> devbox'
+
+curl -fsSL https://get.jetpack.io/devbox | bash
