@@ -111,6 +111,18 @@
    oh-my-zsh
    zsh
    vscode
+   helix
+   nerdfonts
+   neovim
+   lapce
+   hurl
+   httpie
+   ranger
+   yazi
+   unzip
+   clickhouse
+  # azuredatastudio
+  # mongodb-compass
   ];
   
   virtualisation.docker.enable = true;
@@ -127,8 +139,9 @@
     
     shellAliases = {
       devGoToWorkSpace = "cd /home/learningprocesss/Documents/dev";
-      nixosconfig = "sudo code --no-sandbox /etc/nixos/configuration.nix";
+      nixosconfig = "sudo nano /etc/nixos/configuration.nix";
       nixosbuild = "sudo nixos-rebuild switch";
+      nixosconfiggit = "cp -fr /etc/nixos/configuration.nix /home/learningprocesss/Documents/dev/dotFiles/nixos";
     };
 
     ohMyZsh = {
@@ -138,6 +151,8 @@
     };
   };
 
+  #dconf.settings."org/gnome/desktop/wm/preferences".button-layout = "minimize,maximize,close";
+  
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
   # programs.mtr.enable = true;
