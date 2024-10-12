@@ -121,6 +121,8 @@
    yazi
    unzip
    clickhouse
+   tilix
+   atac
   # azuredatastudio
   # mongodb-compass
   ];
